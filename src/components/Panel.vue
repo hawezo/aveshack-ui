@@ -13,7 +13,7 @@
       >
 
         <div class="flex flex-col flex-1 md:order-2" :class="{'my-6': files.length}">
-          <file-result v-for="(data, id) in files" :key="id" :data="data" />
+          <file-result v-for="(data, id) in files" :key="id" :data="data" link="#" />
         </div>
 
         <div class="flex flex-col flex-1 md:order-1">
@@ -54,7 +54,8 @@ export default Vue.extend({
   }),
   methods: {
     onComplete(data) {
-      console.log(data);
+      // TODO: implement real upload, pass result URL to `file-result` component
+      // TODO: handle errors
       this.files.push(data);
     },
   },

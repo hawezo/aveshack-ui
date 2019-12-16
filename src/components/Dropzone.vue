@@ -29,6 +29,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Dropzone from 'vue2-dropzone';
+import config from '@/../aveshack.config';
 
 export default Vue.extend({
   components: {
@@ -36,7 +37,7 @@ export default Vue.extend({
   },
   data: () => ({
     options: {
-      url: 'https://api.aveshack.com/',
+      url: config.api,
     },
   }),
   methods: {

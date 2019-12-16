@@ -38,7 +38,7 @@ export default Vue.extend({
     },
     link: {
       type: String,
-      default: 'https://localhost/',
+      default: '#',
     },
   },
   data: () => ({
