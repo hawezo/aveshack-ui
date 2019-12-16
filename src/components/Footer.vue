@@ -28,7 +28,7 @@ export default Vue.extend({
     Logo,
   },
   data: () => ({
-    config
-  })
+    config,
+  }),
 });
 </script>

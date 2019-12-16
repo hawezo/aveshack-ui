@@ -1,5 +1,7 @@
 <template>
-  <div class="p-4 flex rounded bg-surface md:bg-surface-file text-on-surface my-2">
+  <div
+    class="p-4 flex rounded bg-surface md:bg-surface-file text-on-surface my-2"
+  >
     <div class="h-12 w-12 hidden sm:block">
       <img
         :src="data.dataURL"
@@ -15,12 +17,25 @@
       </div>
     </div>
     <div class="flex items-center justify-center px-2">
-      <a :href="link" title="Ouvrir le fichier" class="mr-4 hover:text-info cursor-pointer transition-all">
+      <a
+        :href="link"
+        title="Ouvrir le fichier"
+        class="mr-4 hover:text-info cursor-pointer transition-all"
+      >
         <fa :icon="['far', 'share-square']" class="text-2xl" />
       </a>
-      <span :href="link" :title="showConfirmation ? 'Lien copié' : 'Copier le lien'" @click="copyLink" class="hover:text-info cursor-pointer transition-all">
+      <span
+        :href="link"
+        :title="showConfirmation ? 'Lien copié' : 'Copier le lien'"
+        @click="copyLink"
+        class="hover:text-info cursor-pointer transition-all"
+      >
         <fa v-if="!showConfirmation" :icon="['far', 'copy']" class="text-2xl" />
-        <fa v-if="showConfirmation" :icon="['far', 'check-circle']" class="text-2xl text-success" />
+        <fa
+          v-if="showConfirmation"
+          :icon="['far', 'check-circle']"
+          class="text-2xl text-success"
+        />
       </span>
     </div>
   </div>
@@ -42,12 +57,14 @@ export default Vue.extend({
     },
   },
   data: () => ({
-    showConfirmation: false
+    showConfirmation: false,
   }),
   methods: {
     filename(filename: string) {
       let max: number = 30;
-      return filename.length > max ? `${filename.substring(0, max)}...` : filename;
+      return filename.length > max
+        ? `${filename.substring(0, max)}...`
+        : filename;
     },
     bytes(value: number) {
       return humanize(value, { locale: 'fr' });
@@ -60,11 +77,11 @@ export default Vue.extend({
 
       this.$copyText(this.link);
       this.showConfirmation = true;
-      setTimeout(() => this.showConfirmation = false, 4000);
+      setTimeout(() => (this.showConfirmation = false), 4000);
     },
     download() {
       location.replace(this.link);
-    }
+    },
   },
 });
 </script>

@@ -8,12 +8,17 @@
         @complete="onComplete"
       />
 
-      <div
-        class="flex flex-1 flex-col w-full md:w-1/2 px-12 pt-6 md:mt-0"
-      >
-
-        <div class="flex flex-col flex-1 md:order-2" :class="{'my-6': files.length}">
-          <file-result v-for="(data, id) in files" :key="id" :data="data" link="#" />
+      <div class="flex flex-1 flex-col w-full md:w-1/2 px-12 pt-6 md:mt-0">
+        <div
+          class="flex flex-col flex-1 md:order-2"
+          :class="{ 'my-6': files.length }"
+        >
+          <file-result
+            v-for="(data, id) in files"
+            :key="id"
+            :data="data"
+            link="#"
+          />
         </div>
 
         <div class="flex flex-col flex-1 md:order-1">
