@@ -36,7 +36,7 @@ export default Vue.extend({
   },
   data: () => ({
     options: {
-      url: 'https://localhost/upload',
+      url: 'https://api.aveshack.com/',
     },
   }),
   methods: {
