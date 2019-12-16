@@ -1,4 +1,5 @@
 module.exports = {
-  url: 'https://aveshack.org',
+  url: 'https://aveshack.com',
   api: 'https://api.aveshack.org',
+  files: ['image/*'],
 };

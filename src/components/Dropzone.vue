@@ -38,6 +38,8 @@ export default Vue.extend({
   data: () => ({
     options: {
       url: config.api,
+      paramName: 'sampleFile',
+      acceptedFiles: config.files.join(','),
     },
   }),
   methods: {
