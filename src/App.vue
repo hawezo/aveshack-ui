@@ -1,29 +1,31 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Layout />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import Vue from 'vue';
+import Layout from './components/Layout.vue';
 
 export default Vue.extend({
-  name: "app",
+  name: 'app',
   components: {
-    HelloWorld
-  }
+    Layout,
+  },
 });
 </script>
 
-<style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="postcss">
+@import 'tailwindcss/base';
+@import 'tailwindcss/utilities';
+@import 'tailwindcss/components';
+
+.link {
+  background-image: linear-gradient(
+    180deg,
+    transparent 70%,
+    rgba(var(--color-info), 0.4) 0
+  );
 }
 </style>
