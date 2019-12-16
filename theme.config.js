@@ -12,7 +12,7 @@ const lightTheme = new Theme()
     // Background colors, but not limited to `bg` utilities.
     background: '#f4f4f4',
     surface: '#ffffff',
-    'surface-file': '#ffffff',
+    'surface-file': '#eeeeee',
     'on-background': '#585851',
     'on-surface': '#3c3c3c',
 
