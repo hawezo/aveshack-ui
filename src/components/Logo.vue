@@ -10,6 +10,11 @@
       type="image/png"
       :srcset="require(`@/assets/${filename}.png`)"
     />
+    <source
+      v-if="jpeg"
+      type="image/jpeg"
+      :srcset="require(`@/assets/${filename}.jpg`)"
+    />
     <img v-if="fallback" :src="require(`@/assets/${fallback}`)" :alt="alt" />
   </picture>
 </template>
